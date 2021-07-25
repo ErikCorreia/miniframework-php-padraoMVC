@@ -1,1 +1,1 @@
-# miniframework-php-padraoMVC
+# Miniframework-php
