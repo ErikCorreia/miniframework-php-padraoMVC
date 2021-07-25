@@ -4,10 +4,10 @@
 
     class IndexController {
         public function index(){
-            echo 'index ok';
+            echo 'index';
         }
         public function sobreNos(){
-            echo 'sobreNos ok';
+            echo 'sobreNos';
         }
     }
 

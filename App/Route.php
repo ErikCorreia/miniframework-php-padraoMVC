@@ -1,24 +1,11 @@
 <?php
     namespace App;
+
+    use MF\Init\Bootstrap;
   
-    class Route {
+    class Route extends Bootstrap{
 
-        private $routes;
-
-        public function __construct() {
-            $this->initRoutes();
-            $this->run($this->getUrl());
-        }
-
-        public function getRoutes() {
-            return $this->routes;
-        }
-
-        public function setRoutes(array $routes) {
-            $this->routes = $routes;
-        }
-
-        public function initRoutes(){
+        protected function initRoutes(){
             $routes['home'] = array(
                 'route' => '/',
                 'controller' => 'indexController',
@@ -33,13 +20,6 @@
             $this->setRoutes($routes);
 
         }
-
-        public function run(){
-
-        }
-
-        public function getUrl() {
-            return parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
-        }
+      
     }
 ?>
