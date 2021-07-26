@@ -2,19 +2,19 @@
 
     namespace App\Controllers;
 
+    //recurssos do miniframework
     use MF\Controller\Action;
-    use App\connection;
+    use MF\Model\Container;
+
+    //Models
     use App\Models\Produto;
+    use App\Models\Info;
 
     class IndexController extends Action{
 
         public function index(){
-            //instância de conexão
-            //Chama o metodo getDb da classe connection definida como static em "App\connection", que faz a conexão com o banco de dados
-            $connect = Connection::getDb();
-
-           //instancia modelo com o parametro que fez a conexão
-            $produto = new Produto($connect);
+          
+            $produto = Container::getModel('Produto');
             $produtos = $produto->getProdutos();
             $this->view->dados = $produtos;
 
@@ -22,6 +22,11 @@
         }
 
         public function sobreNos(){
+            
+            $info = Container::getModel('Info');
+            $informacoes = $info->getInfo();
+            $this->view->dados = $informacoes;
+
             $this->render('sobreNos');
         }
     }
