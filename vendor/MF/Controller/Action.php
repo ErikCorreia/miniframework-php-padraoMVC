@@ -8,9 +8,9 @@
             $this->view = new \stdClass();
         }
 
-        public function render($view){
+        public function render($view, $layout = 'layout'){
             $this->view->page = $view;
-            require_once "../App/Views/header.phtml";
+            require_once "../App/Views/layout.phtml";
         }
 
         protected function content(){
