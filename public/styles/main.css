@@ -1,3 +1,32 @@
-h1{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);  
+}
+header .logo{
+    font-size: 24px;
+    margin-left: 8%;
+    text-decoration: none;
+    color: rgb(252, 249, 249);
+}
+nav{
+    margin: 0 8%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+}
+nav ul li{
+    margin: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }

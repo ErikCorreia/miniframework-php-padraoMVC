@@ -10,7 +10,7 @@
 
         public function render($view){
             $this->view->page = $view;
-            require_once "../App/Views/layout1.phtml";
+            require_once "../App/Views/header.phtml";
         }
 
         protected function content(){
