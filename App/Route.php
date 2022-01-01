@@ -14,7 +14,6 @@
             
             $this->setRoutes($routes);
 
-        }
-      
+        }     
     }
 ?>
