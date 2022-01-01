@@ -5,7 +5,6 @@
    Class Connection {
       public static function getDb() {
          try {
-            //a variavel responsavel pela conexão deve ser alteradas de acordo com o banco de dados da aplicação, alterando o "host" e "dbname"
             $Connect = new \PDO(
                "mysql:host=localhost; dbname=mvc; charset=utf8",
                //usuario
